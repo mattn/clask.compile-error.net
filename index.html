@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clask</title>
+    <script src="https://cdn.jsdelivr.net/npm/@nikolat/makibishi@0.2.0"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <style>
+      :root {
+        --bg: #f6f7f9;
+        --card-bg: #ffffff;
+        --card-border: rgba(0, 0, 0, 0.08);
+        --text: #1c1e21;
+        --text-sub: #6b7280;
+        --accent: #8b5cf6;
+        --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #14151a;
+          --card-bg: #1e2028;
+          --card-border: rgba(255, 255, 255, 0.08);
+          --text: #e5e7eb;
+          --text-sub: #9ca3af;
+          --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+          --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+      }
+      body {
+        margin: 0;
+        padding: 40px 16px 64px;
+        transform: none;
+        min-height: 100vh;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans",
+          "Noto Sans JP", sans-serif;
+      }
+      #logo-wrap {
+        position: fixed;
+        top: 16px;
+        left: 16px;
+      }
+      #logo {
+        width: 56px;
+        border-radius: 12px;
+      }
+      section {
+        width: 100%;
+        max-width: 880px;
+      }
+      section h2 {
+        margin: 0 0 12px 4px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-sub);
+      }
+      .apps {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 14px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .apps a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+        color: var(--text);
+        text-decoration: none;
+        transition: transform 0.15s ease, box-shadow 0.15s ease,
+          border-color 0.15s ease;
+      }
+      .apps a:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+        border-color: var(--accent);
+      }
+      .apps .icon {
+        font-size: 1.4rem;
+        line-height: 1;
+      }
+      .apps .name {
+        font-weight: 600;
+        font-size: 0.92rem;
+        min-width: 0;
+      }
+      .apps .path {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 400;
+        color: var(--text-sub);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .chips a {
+        display: inline-block;
+        padding: 6px 14px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 999px;
+        box-shadow: var(--shadow);
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--text);
+        text-decoration: none;
+        transition: transform 0.15s ease, box-shadow 0.15s ease,
+          border-color 0.15s ease;
+      }
+      .chips a:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-hover);
+        border-color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="logo-wrap"><img id="logo" src="mattn-masakari.png" alt="Clask"></div>
+
+    <section>
+      <h2>Apps</h2>
+      <ul class="apps">
+        <li><a href="emoji-ranking/"><span class="icon">📊</span><span class="name">Emoji Ranking<span class="path">emoji-ranking</span></span></a></li>
+        <li><a href="nip66-viewer/"><span class="icon">🔭</span><span class="name">NIP-66 Viewer<span class="path">nip66-viewer</span></span></a></li>
+        <li><a href="nostr-botdetect/"><span class="icon">🤖</span><span class="name">Nostr Bot Detector<span class="path">nostr-botdetect</span></span></a></li>
+        <li><a href="nostr-kentei/"><span class="icon">📝</span><span class="name">Nostr 検定<span class="path">nostr-kentei</span></span></a></li>
+        <li><a href="relay-nips/"><span class="icon">📡</span><span class="name">Relay NIPs<span class="path">relay-nips</span></span></a></li>
+        <li><a href="relay-ranking/"><span class="icon">🏆</span><span class="name">Relay Ranking<span class="path">relay-ranking</span></span></a></li>
+        <li><a href="report-viewer/"><span class="icon">🚨</span><span class="name">Report Viewer<span class="path">report-viewer</span></span></a></li>
+        <li><a href="space-nostr/"><span class="icon">🚀</span><span class="name">Space Nostr<span class="path">space-nostr</span></span></a></li>
+        <li><a href="https://nostr-poll.compile-error.net/"><span class="icon">🗳️</span><span class="name">Nostr Poll<span class="path">nostr-poll.compile-error.net</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/"><span class="icon">🪽</span><span class="name">njump<span class="path">njump.compile-error.net</span></span></a></li>
+        <li><a href="https://nostr-webhook.compile-error.net/"><span class="icon">🪝</span><span class="name">Nostr Webhook<span class="path">nostr-webhook.compile-error.net</span></span></a></li>
+        <li><a href="https://nostr-restore.compile-error.net/"><span class="icon">♻️</span><span class="name">Nostr Restore<span class="path">nostr-restore.compile-error.net</span></span></a></li>
+        <li><a href="https://nostr-todo.compile-error.net/"><span class="icon">🗒️</span><span class="name">Nostr Todo<span class="path">nostr-todo.compile-error.net</span></span></a></li>
+        <li><a href="https://image-bot.mattn-jp.workers.dev/"><span class="icon">📷</span><span class="name">Nostr Image Bot<span class="path">image-bot.mattn-jp.workers.dev</span></span></a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Relays</h2>
+      <ul class="apps">
+        <li><a href="https://nostr.compile-error.net/"><span class="icon">📡</span><span class="name">Nostr Relay<span class="path">wss://nostr.compile-error.net</span></span></a></li>
+        <li><a href="https://cagliostr.compile-error.net/"><span class="icon">🧙</span><span class="name">Cagliostr<span class="path">wss://cagliostr.compile-error.net</span></span></a></li>
+        <li><a href="https://nip29-relay.compile-error.net/"><span class="icon">👥</span><span class="name">NIP-29 Relay<span class="path">wss://nip29-relay.compile-error.net</span></span></a></li>
+        <li><a href="https://crystal-nostr-relay.compile-error.net/"><span class="icon">💎</span><span class="name">Crystal Nostr Relay<span class="path">wss://crystal-nostr-relay.compile-error.net</span></span></a></li>
+        <li><a href="https://lisp-nostr-relay.compile-error.net/"><span class="icon">🐍</span><span class="name">Lisp Nostr Relay<span class="path">wss://lisp-nostr-relay.compile-error.net</span></span></a></li>
+        <li><a href="https://lua-nostr-relay.compile-error.net/"><span class="icon">🌙</span><span class="name">Lua Nostr Relay<span class="path">wss://lua-nostr-relay.compile-error.net</span></span></a></li>
+        <li><a href="https://moonbit-nostr-relay.compile-error.net/"><span class="icon">🐰</span><span class="name">MoonBit Nostr Relay<span class="path">wss://moonbit-nostr-relay.compile-error.net</span></span></a></li>
+        <li><a href="https://mruby-nostr-relay.compile-error.net/"><span class="icon">💠</span><span class="name">mruby Nostr Relay<span class="path">wss://mruby-nostr-relay.compile-error.net</span></span></a></li>
+        <li><a href="https://nim-nostr-relay.compile-error.net/"><span class="icon">👑</span><span class="name">Nim Nostr Relay<span class="path">wss://nim-nostr-relay.compile-error.net</span></span></a></li>
+        <li><a href="https://perl-nostr-relay.compile-error.net/"><span class="icon">🐪</span><span class="name">Perl Nostr Relay<span class="path">wss://perl-nostr-relay.compile-error.net</span></span></a></li>
+        <li><a href="https://ruby-nostr-relay.compile-error.net/"><span class="icon">♦️</span><span class="name">Ruby Nostr Relay<span class="path">wss://ruby-nostr-relay.compile-error.net</span></span></a></li>
+        <li><a href="https://zig-nostr-relay.compile-error.net/"><span class="icon">⚡</span><span class="name">Zig Nostr Relay<span class="path">wss://zig-nostr-relay.compile-error.net</span></span></a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Bots</h2>
+      <ul class="apps">
+        <li><a href="https://njump.compile-error.net/npub17a50460j8y99yglsqzjzfh4exq4f8q0r82ackzzv4pz0dyd3rnwsxc9tp2"><span class="icon">💬</span><span class="name">Buzz Word<span class="path">njump.compile-error.net/npub17a50…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1ft7qy8qrf4huyk48nz0jf7parw3pfjs24az7py80ex8ympnqw6csz85fxu"><span class="icon">🍃</span><span class="name">俳句bot<span class="path">njump.compile-error.net/npub1ft7q…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1ttqyyl8stz9wtj0sn25qp6vah0jdcxwpdtaaxg4efsqkczz7rsxshjpp3x"><span class="icon">🀄</span><span class="name">Mahjong Game<span class="path">njump.compile-error.net/npub1ttqy…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1uq7u244ays60e7dt9lktu9994yptq6ka4uhanqz4ceex4ayv2g2sxdgrtd"><span class="icon">🏃</span><span class="name">runbot<span class="path">njump.compile-error.net/npub1uq7u…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1cphr4yweqshlwunygag6lqknu0nsvac47yvecjtc0f6zs5j770rs4f8emh"><span class="icon">🍝</span><span class="name">サイゼガチャ<span class="path">njump.compile-error.net/npub1cphr…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1waxx0074rc7pldfw3znwe6ysjp30fehqacdclyc5m75z0ay8gk0qq2gujl"><span class="icon">🔥</span><span class="name">Hot Post Ranking<span class="path">njump.compile-error.net/npub1waxx…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub17qqekpej52c6wqmqlw84mkmlgp2ylz6xkryj3ccqk5vld4f7clys047uwf"><span class="icon">🎲</span><span class="name">Markov Chain<span class="path">njump.compile-error.net/npub17qqe…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1q6ptkv6tlljf58ndalf9pc5vvhqhxl50xwwnjnjqef4dlunusjmqyp7qmf"><span class="icon">📅</span><span class="name">今日は何の日<span class="path">njump.compile-error.net/npub1q6pt…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub120hur8kpufu44h6qll50ywaesxk2qxvek295hm4x0ur7cgqj8jvq7pqksp"><span class="icon">🚔</span><span class="name">不審者情報<span class="path">njump.compile-error.net/npub120hur…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub16xmrzayk8p4ekvpxc944q6a2pqd6npk2ea5adgnckqfmhwyw0r7s0q44ey"><span class="icon">👮</span><span class="name">5000000000000000警察<span class="path">njump.compile-error.net/npub16xmr…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1f6rvmwc76arl7sxx2vparlzx8cg2ajc3xpymqh7yx97znccue2hs5mkavc"><span class="icon">💢</span><span class="name">ぬるぽ・ｶﾞｯ<span class="path">njump.compile-error.net/npub1f6rv…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1jdelt5c8400d3qf4v4x5ns0xywgymw7f8rgfx07zp2qpys50du4sm5jkhj"><span class="icon">✅</span><span class="name">todo bot<span class="path">njump.compile-error.net/npub1jdel…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1psztp4ewrnntks87ehkxeuvx5kpaspnk7hens6ycr3u7uptndsuskn58dc"><span class="icon">🖼️</span><span class="name">名言画像 bot<span class="path">njump.compile-error.net/npub1pszt…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1v75w6lnkc7derm3nvddd45rnl9rxkvh0yyeh8taj7vcdlta8plmqdp2g4e"><span class="icon">🐹</span><span class="name">Golang News<span class="path">njump.compile-error.net/npub1v75w…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1k2s2288t7runm5rmw83pldgq5yn896402um2mz5tr9uqp6c6nvuqxrwnyz"><span class="icon">📋</span><span class="name">NIPs Changes<span class="path">njump.compile-error.net/npub1k2s2…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1xcg0hwzwnyqlnzhnjuenlrtvlpxsexmztqeqfc5e3dg7ymss8jts0wptyw"><span class="icon">🌀</span><span class="name">けだまメイズ<span class="path">njump.compile-error.net/npub1xcg0…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1m923fzrg2kczznsnt22xm7kexmeta6slqgnd2yhtn0maxj3kr56sgvlgew"><span class="icon">🎴</span><span class="name">なに切る<span class="path">njump.compile-error.net/npub1m923…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub144q65dqf0wwdzk3jtzhk6qpuygasm4nke4g4vw60yq5s2clzea4qzfdppm"><span class="icon">🗞️</span><span class="name">Publickey 配信 (非公式)<span class="path">njump.compile-error.net/npub144q6…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1q7ngar9h8ave99hhaaven32rc7djwkjsgvtwr673qcrh7fp4qmqslcny0n"><span class="icon">📻</span><span class="name">vim-jp ラジオ<span class="path">njump.compile-error.net/npub1q7ng…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1ayk3a3yhw6fjj9mfpr97cmxdupfgmzfu39t7v5rzggwxvtydqfhqf79qqt"><span class="icon">🐐</span><span class="name">やぎちゃん<span class="path">njump.compile-error.net/npub1ayk3…</span></span></a></li>
+        <li><a href="https://njump.compile-error.net/npub1rtlhfx7welx2lc0v734tyhcx79q0r5vdcgaj28w7tr4nez5rmwpshndwys"><span class="icon">⚡</span><span class="name">Yahoo!ニュース 速報 (非公式)<span class="path">njump.compile-error.net/npub1rtlh…</span></span></a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Tools</h2>
+      <ul class="apps">
+        <li><a href="https://github.com/mattn/algia"><span class="icon">⌨️</span><span class="name">algia<span class="path">github.com/mattn/algia</span></span></a></li>
+        <li><a href="https://github.com/mattn/feed2nostr"><span class="icon">📰</span><span class="name">feed2nostr<span class="path">github.com/mattn/feed2nostr</span></span></a></li>
+        <li><a href="https://github.com/mattn/nip66-reporter"><span class="icon">📈</span><span class="name">nip66-reporter<span class="path">github.com/mattn/nip66-reporter</span></span></a></li>
+        <li><a href="https://github.com/mattn/nostr-alert"><span class="icon">🔔</span><span class="name">nostr-alert<span class="path">github.com/mattn/nostr-alert</span></span></a></li>
+        <li><a href="https://github.com/mattn/nostr-backup"><span class="icon">💾</span><span class="name">nostr-backup<span class="path">github.com/mattn/nostr-backup</span></span></a></li>
+        <li><a href="https://github.com/mattn/nostr-coinchart"><span class="icon">🪙</span><span class="name">nostr-coinchart<span class="path">github.com/mattn/nostr-coinchart</span></span></a></li>
+        <li><a href="https://github.com/mattn/nostr-fushinsha-summary"><span class="icon">🕵️</span><span class="name">nostr-fushinsha-summary<span class="path">github.com/mattn/nostr-fushinsha-summary</span></span></a></li>
+        <li><a href="https://github.com/mattn/nostr-relay-ranking"><span class="icon">🥇</span><span class="name">nostr-relay-ranking<span class="path">github.com/mattn/nostr-relay-ranking</span></span></a></li>
+        <li><a href="https://github.com/mattn/nostr-status-lastfm"><span class="icon">🎵</span><span class="name">nostr-status-lastfm<span class="path">github.com/mattn/nostr-status-lastfm</span></span></a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Articles</h2>
+      <ul class="apps">
+        <li><a href="https://zenn.dev/mattn/articles/a1a67af88394b4"><span class="icon">🐦‍⬛</span><span class="name">誰でも作れる Nostr リレーサーバの作り方<span class="path">Zenn — 2025年12月8日</span></span></a></li>
+        <li><a href="https://zenn.dev/mattn/articles/cf43423178d65c"><span class="icon">👾</span><span class="name">Nostr の面白さをエンジニア目線で解説してみる<span class="path">Zenn — 2023年12月16日</span></span></a></li>
+        <li><a href="https://gihyo.jp/magazine/SD/archive/2023/202312"><span class="icon">📖</span><span class="name">Nostr botの作り方<span class="path">Software Design 2023年12月号 — 連載「新時代の分散型SNS Nostr」最終回</span></span></a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>More on GitHub</h2>
+      <ul class="chips">
+        <li><a href="https://github.com/mattn/cloudflare-nostr-chinchin">cloudflare-nostr-chinchin</a></li>
+        <li><a href="https://github.com/mattn/cloudflare-nostr-nowplaying">cloudflare-nostr-nowplaying</a></li>
+        <li><a href="https://github.com/mattn/cloudflare-nostr-nullpoga">cloudflare-nostr-nullpoga</a></li>
+        <li><a href="https://github.com/mattn/go-nostr-yabume">go-nostr-yabume</a></li>
+        <li><a href="https://github.com/mattn/go-nostrbuild">go-nostrbuild</a></li>
+        <li><a href="https://github.com/mattn/lua-nostr-schnorr">lua-nostr-schnorr</a></li>
+        <li><a href="https://github.com/mattn/nostr-anonymousface">nostr-anonymousface</a></li>
+        <li><a href="https://github.com/mattn/nostr-btcchart">nostr-btcchart</a></li>
+        <li><a href="https://github.com/mattn/nostr-cxx-bot">nostr-cxx-bot</a></li>
+        <li><a href="https://github.com/mattn/nostr-delete-events">nostr-delete-events</a></li>
+        <li><a href="https://github.com/mattn/nostr-forwarder">nostr-forwarder</a></li>
+        <li><a href="https://github.com/mattn/nostr-geohash-decoder">nostr-geohash-decoder</a></li>
+        <li><a href="https://github.com/mattn/nostr-id">nostr-id</a></li>
+        <li><a href="https://github.com/mattn/nostr-ircd">nostr-ircd</a></li>
+        <li><a href="https://github.com/mattn/nostr-json-schemas" title="JSON schema for Nostr Event JSON">nostr-json-schemas</a></li>
+        <li><a href="https://github.com/mattn/nostr-mute">nostr-mute</a></li>
+        <li><a href="https://github.com/mattn/nostr-notify">nostr-notify</a></li>
+        <li><a href="https://github.com/mattn/nostr-nowplaying" title="Update #nowplaying NIP-38 status (kind 30315) for Rhythmbox">nostr-nowplaying</a></li>
+        <li><a href="https://github.com/mattn/nostr-nsite-server" title="Serve and publish NIP-5A static sites (nsite) over HTTP">nostr-nsite-server</a></li>
+        <li><a href="https://github.com/mattn/nostr-nullpoga.deno.dev">nostr-nullpoga.deno.dev</a></li>
+        <li><a href="https://github.com/mattn/nostr-ojichat">nostr-ojichat</a></li>
+        <li><a href="https://github.com/mattn/nostr-relay-benchmark">nostr-relay-benchmark</a></li>
+        <li><a href="https://github.com/mattn/nostr-relay-http-chunk">nostr-relay-http-chunk</a></li>
+        <li><a href="https://github.com/mattn/nostr-search">nostr-search</a></li>
+        <li><a href="https://github.com/mattn/nostr-swiss-army-knife">nostr-swiss-army-knife</a></li>
+        <li><a href="https://github.com/mattn/nostr-ui" title="WIP: nostr gui client">nostr-ui</a></li>
+        <li><a href="https://github.com/mattn/nostr-undelete">nostr-undelete</a></li>
+        <li><a href="https://github.com/mattn/nostr-whois">nostr-whois</a></li>
+        <li><a href="https://github.com/mattn/sqlite3-nostr">sqlite3-nostr</a></li>
+      </ul>
+    </section>
+
+    <span
+        class="makibishi"
+        data-relays="wss://relay.nostr.band,wss://nos.lol,wss://relay.damus.io,wss://yabu.me,wss://cagliostr.compile-error.net,wss://nostr.compile-error.net"
+        data-url="https://clask.compile-error.net/"
+        data-content="🤙"
+        data-allow-anonymous-reaction="true"
+        data-allow-to-delete-reaction="true"
+        ></span>
+  </body>
+</html>
