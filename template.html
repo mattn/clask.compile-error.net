@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clask</title>
+    <script src="https://cdn.jsdelivr.net/npm/@nikolat/makibishi@0.2.0"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <style>
+      :root {
+        --bg: #f6f7f9;
+        --card-bg: #ffffff;
+        --card-border: rgba(0, 0, 0, 0.08);
+        --text: #1c1e21;
+        --text-sub: #6b7280;
+        --accent: #8b5cf6;
+        --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #14151a;
+          --card-bg: #1e2028;
+          --card-border: rgba(255, 255, 255, 0.08);
+          --text: #e5e7eb;
+          --text-sub: #9ca3af;
+          --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+          --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+      }
+      body {
+        margin: 0;
+        padding: 40px 16px 64px;
+        transform: none;
+        min-height: 100vh;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans",
+          "Noto Sans JP", sans-serif;
+      }
+      #logo-wrap {
+        position: fixed;
+        top: 16px;
+        left: 16px;
+      }
+      #logo {
+        width: 56px;
+        border-radius: 12px;
+      }
+      section {
+        width: 100%;
+        max-width: 880px;
+      }
+      section h2 {
+        margin: 0 0 12px 4px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-sub);
+      }
+      .apps {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 14px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .apps a {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 14px 16px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+        color: var(--text);
+        text-decoration: none;
+        transition: transform 0.15s ease, box-shadow 0.15s ease,
+          border-color 0.15s ease;
+      }
+      .apps a:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+        border-color: var(--accent);
+      }
+      .apps .icon {
+        font-size: 1.4rem;
+        line-height: 1;
+      }
+      .apps .head {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+      .apps .name {
+        font-weight: 600;
+        font-size: 0.92rem;
+        min-width: 0;
+      }
+      .apps .path {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 400;
+        color: var(--text-sub);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .apps .desc {
+        display: block;
+        font-size: 0.78rem;
+        line-height: 1.65;
+        color: var(--text-sub);
+        word-break: break-word;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .chips a {
+        display: inline-block;
+        padding: 6px 14px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 999px;
+        box-shadow: var(--shadow);
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--text);
+        text-decoration: none;
+        transition: transform 0.15s ease, box-shadow 0.15s ease,
+          border-color 0.15s ease;
+      }
+      .chips a:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-hover);
+        border-color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="logo-wrap"><img id="logo" src="mattn-masakari.png" alt="Clask"></div>
+
+{{SECTIONS}}
+
+    <span
+        class="makibishi"
+        data-relays="wss://relay.nostr.band,wss://nos.lol,wss://relay.damus.io,wss://yabu.me,wss://cagliostr.compile-error.net,wss://nostr.compile-error.net"
+        data-url="https://clask.compile-error.net/"
+        data-content="🤙"
+        data-allow-anonymous-reaction="true"
+        data-allow-to-delete-reaction="true"
+        ></span>
+  </body>
+</html>

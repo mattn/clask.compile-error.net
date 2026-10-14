@@ -1,0 +1,622 @@
+{
+  "sections": [
+    {
+      "title": "Apps",
+      "style": "cards",
+      "items": [
+        {
+          "icon": "📊",
+          "name": "Emoji Ranking",
+          "path": "clask.compile-error.net/emoji-ranking",
+          "url": "emoji-ranking/",
+          "desc": "リアクション (kind 7) を集計して、よく使われているカスタム絵文字をランキング表示します。"
+        },
+        {
+          "icon": "🔭",
+          "name": "NIP-66 Viewer",
+          "path": "clask.compile-error.net/nip66-viewer",
+          "url": "nip66-viewer/",
+          "desc": "NIP-66 のリレー監視レポート (kind 30166) を取得して、リレーの稼働状況を一覧します。"
+        },
+        {
+          "icon": "🤖",
+          "name": "Nostr Bot Detector",
+          "path": "clask.compile-error.net/nostr-botdetect",
+          "url": "nostr-botdetect/",
+          "desc": "npub を入力すると、プロフィール (kind 0) と直近の投稿 (kind 1) の特徴から bot かどうかを判定します。リレーへはブラウザから直接接続します。"
+        },
+        {
+          "icon": "📝",
+          "name": "Nostr 検定",
+          "path": "clask.compile-error.net/nostr-kentei",
+          "url": "nostr-kentei/",
+          "desc": "クイズ形式で、あなたの Nostr 理解度を測定します。"
+        },
+        {
+          "icon": "🎧",
+          "name": "Nostr Podcast Player",
+          "path": "clask.compile-error.net/nostr-podcast-player",
+          "url": "nostr-podcast-player/",
+          "desc": "Nostr 上で公開されているポッドキャストのチャンネルとエピソードを選んで、そのままブラウザで再生できます。"
+        },
+        {
+          "icon": "📚",
+          "name": "Nostr Wiki",
+          "path": "clask.compile-error.net/nostr-wiki",
+          "url": "nostr-wiki/",
+          "desc": "kind 30819 のイベントとして Wiki ページを閲覧・編集できます。"
+        },
+        {
+          "icon": "📡",
+          "name": "Relay NIPs",
+          "path": "clask.compile-error.net/relay-nips",
+          "url": "relay-nips/",
+          "desc": "mattn の多言語 Nostr リレー実装それぞれの NIP 対応状況を、マトリクスで一覧します。"
+        },
+        {
+          "icon": "🏆",
+          "name": "Relay Ranking",
+          "path": "clask.compile-error.net/relay-ranking",
+          "url": "relay-ranking/",
+          "desc": "kind 10002 (Relay List Metadata) を集計して、いま最も使われているリレーをランキングします。主に日本のユーザが対象です。"
+        },
+        {
+          "icon": "🚨",
+          "name": "Report Viewer",
+          "path": "clask.compile-error.net/report-viewer",
+          "url": "report-viewer/",
+          "desc": "通報イベント (kind 1984) を検索して、どんな報告が流れているかを確認できます。"
+        },
+        {
+          "icon": "🚀",
+          "name": "Space Nostr",
+          "path": "clask.compile-error.net/space-nostr",
+          "url": "space-nostr/",
+          "desc": "wss://yabu.me に流れてくる投稿を、Three.js の 3D 空間でリアルタイムに可視化します。"
+        },
+        {
+          "icon": "🗳️",
+          "name": "Nostr Poll",
+          "path": "nostr-poll.compile-error.net",
+          "url": "https://nostr-poll.compile-error.net/",
+          "desc": "NIP-88 の投票 (kind 1068) を一覧して、投票したり結果を確認したりできます。"
+        },
+        {
+          "icon": "🪽",
+          "name": "njump",
+          "path": "njump.compile-error.net",
+          "url": "https://njump.compile-error.net/",
+          "desc": "イベントやプロフィールを Web ページとして表示する njump のセルフホスト版です。"
+        },
+        {
+          "icon": "🪝",
+          "name": "Nostr Webhook",
+          "path": "nostr-webhook.compile-error.net",
+          "url": "https://nostr-webhook.compile-error.net/",
+          "desc": "投稿が登録した条件にマッチしたときに、任意の Webhook エンドポイントを呼び出します。"
+        },
+        {
+          "icon": "♻️",
+          "name": "Nostr Restore",
+          "path": "nostr-restore.compile-error.net",
+          "url": "https://nostr-restore.compile-error.net/",
+          "desc": "npub を指定して、バックアップ済みのイベントを復元・閲覧できます。"
+        },
+        {
+          "icon": "🗒️",
+          "name": "Nostr Todo",
+          "path": "nostr-todo.compile-error.net",
+          "url": "https://nostr-todo.compile-error.net/",
+          "desc": "bot にメンションするだけで使える TODO 管理。Cloudflare Workers 上で動作し、ブラウザからも一覧を確認できます。"
+        },
+        {
+          "icon": "📷",
+          "name": "Nostr Image Bot",
+          "path": "image-bot.mattn-jp.workers.dev",
+          "url": "https://image-bot.mattn-jp.workers.dev/",
+          "desc": "キーワードに対応する画像を投稿する bot。登録済みの画像を一覧できます。"
+        }
+      ]
+    },
+    {
+      "title": "Relays",
+      "style": "cards",
+      "items": [
+        {
+          "icon": "📡",
+          "name": "Nostr Relay",
+          "path": "wss://nostr.compile-error.net",
+          "url": "https://nostr.compile-error.net/",
+          "desc": "relayer フレームワークをベースにした Go 製のリレー。"
+        },
+        {
+          "icon": "🧙",
+          "name": "Cagliostr",
+          "path": "wss://cagliostr.compile-error.net",
+          "url": "https://cagliostr.compile-error.net/",
+          "desc": "C++ で書かれた Nostr リレー。"
+        },
+        {
+          "icon": "🏠",
+          "name": "Casanostr",
+          "path": "wss://casanostr.compile-error.net",
+          "url": "https://casanostr.compile-error.net/",
+          "desc": "C で書かれた Nostr リレー。"
+        },
+        {
+          "icon": "👥",
+          "name": "NIP-29 Relay",
+          "path": "wss://nip29-relay.compile-error.net",
+          "url": "https://nip29-relay.compile-error.net/",
+          "desc": "NIP-29 (Relay-based Groups) に対応したグループチャット用リレー。khatru ベース。"
+        },
+        {
+          "icon": "💎",
+          "name": "Crystal Nostr Relay",
+          "path": "wss://crystal-nostr-relay.compile-error.net",
+          "url": "https://crystal-nostr-relay.compile-error.net/",
+          "desc": "Crystal で書かれた軽量な Nostr リレー実装。"
+        },
+        {
+          "icon": "🐍",
+          "name": "Lisp Nostr Relay",
+          "path": "wss://lisp-nostr-relay.compile-error.net",
+          "url": "https://lisp-nostr-relay.compile-error.net/",
+          "desc": "Lisp で書かれた軽量な Nostr リレー実装。"
+        },
+        {
+          "icon": "🌙",
+          "name": "Lua Nostr Relay",
+          "path": "wss://lua-nostr-relay.compile-error.net",
+          "url": "https://lua-nostr-relay.compile-error.net/",
+          "desc": "Lua で書かれた軽量な Nostr リレー実装。"
+        },
+        {
+          "icon": "🐰",
+          "name": "MoonBit Nostr Relay",
+          "path": "wss://moonbit-nostr-relay.compile-error.net",
+          "url": "https://moonbit-nostr-relay.compile-error.net/",
+          "desc": "MoonBit で書かれた軽量な Nostr リレー実装。"
+        },
+        {
+          "icon": "💠",
+          "name": "mruby Nostr Relay",
+          "path": "wss://mruby-nostr-relay.compile-error.net",
+          "url": "https://mruby-nostr-relay.compile-error.net/",
+          "desc": "mruby で書かれた Nostr リレー。"
+        },
+        {
+          "icon": "👑",
+          "name": "Nim Nostr Relay",
+          "path": "wss://nim-nostr-relay.compile-error.net",
+          "url": "https://nim-nostr-relay.compile-error.net/",
+          "desc": "Nim で書かれた軽量な Nostr リレー実装。"
+        },
+        {
+          "icon": "🐫",
+          "name": "OCaml Nostr Relay",
+          "path": "wss://ocaml-nostr-relay.compile-error.net",
+          "url": "https://ocaml-nostr-relay.compile-error.net/",
+          "desc": "OCaml で書かれた Nostr リレー。"
+        },
+        {
+          "icon": "🐪",
+          "name": "Perl Nostr Relay",
+          "path": "wss://perl-nostr-relay.compile-error.net",
+          "url": "https://perl-nostr-relay.compile-error.net/",
+          "desc": "Perl で書かれたシンプルな Nostr リレー実装。"
+        },
+        {
+          "icon": "♦️",
+          "name": "Ruby Nostr Relay",
+          "path": "wss://ruby-nostr-relay.compile-error.net",
+          "url": "https://ruby-nostr-relay.compile-error.net/",
+          "desc": "Ruby で書かれた軽量な Nostr リレー実装。"
+        },
+        {
+          "icon": "⚡",
+          "name": "Zig Nostr Relay",
+          "path": "wss://zig-nostr-relay.compile-error.net",
+          "url": "https://zig-nostr-relay.compile-error.net/",
+          "desc": "Zig で書かれた軽量な Nostr リレー実装。"
+        }
+      ]
+    },
+    {
+      "title": "Bots",
+      "style": "cards",
+      "items": [
+        {
+          "icon": "💬",
+          "name": "Buzz Word",
+          "path": "njump.compile-error.net/npub17a50…",
+          "url": "https://njump.compile-error.net/npub17a50460j8y99yglsqzjzfh4exq4f8q0r82ackzzv4pz0dyd3rnwsxc9tp2",
+          "desc": "人気のワードランキング (バズワード) をお届けします。"
+        },
+        {
+          "icon": "🍃",
+          "name": "俳句bot",
+          "path": "njump.compile-error.net/npub1ft7q…",
+          "url": "https://njump.compile-error.net/npub1ft7qy8qrf4huyk48nz0jf7parw3pfjs24az7py80ex8ympnqw6csz85fxu",
+          "desc": "投稿の中から五七五になっている文を見つけて、#n575 を付けて紹介します。"
+        },
+        {
+          "icon": "🀄",
+          "name": "Mahjong Game",
+          "path": "njump.compile-error.net/npub1ttqy…",
+          "url": "https://njump.compile-error.net/npub1ttqyyl8stz9wtj0sn25qp6vah0jdcxwpdtaaxg4efsqkczz7rsxshjpp3x",
+          "desc": "リプライで対局できる麻雀 bot。"
+        },
+        {
+          "icon": "🏃",
+          "name": "runbot",
+          "path": "njump.compile-error.net/npub1uq7u…",
+          "url": "https://njump.compile-error.net/npub1uq7u244ays60e7dt9lktu9994yptq6ka4uhanqz4ceex4ayv2g2sxdgrtd",
+          "desc": "ランランラン。"
+        },
+        {
+          "icon": "🍝",
+          "name": "サイゼガチャ",
+          "path": "njump.compile-error.net/npub1cphr…",
+          "url": "https://njump.compile-error.net/npub1cphr4yweqshlwunygag6lqknu0nsvac47yvecjtc0f6zs5j770rs4f8emh",
+          "desc": "サイゼリヤのメニューをお選びします。"
+        },
+        {
+          "icon": "🔥",
+          "name": "Hot Post Ranking",
+          "path": "njump.compile-error.net/npub1waxx…",
+          "url": "https://njump.compile-error.net/npub1waxx0074rc7pldfw3znwe6ysjp30fehqacdclyc5m75z0ay8gk0qq2gujl",
+          "desc": "数時間内でホットな投稿をランキング表示します。"
+        },
+        {
+          "icon": "🎲",
+          "name": "Markov Chain",
+          "path": "njump.compile-error.net/npub17qqe…",
+          "url": "https://njump.compile-error.net/npub17qqekpej52c6wqmqlw84mkmlgp2ylz6xkryj3ccqk5vld4f7clys047uwf",
+          "desc": "マルコフ連鎖で生成した文章を投稿します。"
+        },
+        {
+          "icon": "📅",
+          "name": "今日は何の日",
+          "path": "njump.compile-error.net/npub1q6pt…",
+          "url": "https://njump.compile-error.net/npub1q6ptkv6tlljf58ndalf9pc5vvhqhxl50xwwnjnjqef4dlunusjmqyp7qmf",
+          "desc": "今日が何の日かを投稿します。"
+        },
+        {
+          "icon": "🚔",
+          "name": "不審者情報",
+          "path": "njump.compile-error.net/npub120hur…",
+          "url": "https://njump.compile-error.net/npub120hur8kpufu44h6qll50ywaesxk2qxvek295hm4x0ur7cgqj8jvq7pqksp",
+          "desc": "日本不審者情報センターの情報を転載しています。(非公式)"
+        },
+        {
+          "icon": "👮",
+          "name": "5000000000000000警察",
+          "path": "njump.compile-error.net/npub16xmr…",
+          "url": "https://njump.compile-error.net/npub16xmrzayk8p4ekvpxc944q6a2pqd6npk2ea5adgnckqfmhwyw0r7s0q44ey",
+          "desc": "5000000000000000 の間違いを指摘します。"
+        },
+        {
+          "icon": "💢",
+          "name": "ぬるぽ・ｶﾞｯ",
+          "path": "njump.compile-error.net/npub1f6rv…",
+          "url": "https://njump.compile-error.net/npub1f6rvmwc76arl7sxx2vparlzx8cg2ajc3xpymqh7yx97znccue2hs5mkavc",
+          "desc": "ぬるぽ を許さない。"
+        },
+        {
+          "icon": "✅",
+          "name": "todo bot",
+          "path": "njump.compile-error.net/npub1jdel…",
+          "url": "https://njump.compile-error.net/npub1jdelt5c8400d3qf4v4x5ns0xywgymw7f8rgfx07zp2qpys50du4sm5jkhj",
+          "desc": "メンションで操作する TODO 管理 bot。一覧は Nostr Todo で確認できます。"
+        },
+        {
+          "icon": "🖼️",
+          "name": "名言画像 bot",
+          "path": "njump.compile-error.net/npub1pszt…",
+          "url": "https://njump.compile-error.net/npub1psztp4ewrnntks87ehkxeuvx5kpaspnk7hens6ycr3u7uptndsuskn58dc",
+          "desc": "投稿に #makeitquote をリプライすると、元の投稿を画像化します。"
+        },
+        {
+          "icon": "🐹",
+          "name": "Golang News",
+          "path": "njump.compile-error.net/npub1v75w…",
+          "url": "https://njump.compile-error.net/npub1v75w6lnkc7derm3nvddd45rnl9rxkvh0yyeh8taj7vcdlta8plmqdp2g4e",
+          "desc": "r/golang の記事を #golang_news タグで配信します。"
+        },
+        {
+          "icon": "📋",
+          "name": "NIPs Changes",
+          "path": "njump.compile-error.net/npub1k2s2…",
+          "url": "https://njump.compile-error.net/npub1k2s2288t7runm5rmw83pldgq5yn896402um2mz5tr9uqp6c6nvuqxrwnyz",
+          "desc": "github.com/nostr-protocol/nips へのコミットの変更内容を配信します。"
+        },
+        {
+          "icon": "🌀",
+          "name": "けだまメイズ",
+          "path": "njump.compile-error.net/npub1xcg0…",
+          "url": "https://njump.compile-error.net/npub1xcg0hwzwnyqlnzhnjuenlrtvlpxsexmztqeqfc5e3dg7ymss8jts0wptyw",
+          "desc": "ポッドキャスト『けだまメイズ』の最新情報をお届けします。"
+        },
+        {
+          "icon": "🎴",
+          "name": "なに切る",
+          "path": "njump.compile-error.net/npub1m923…",
+          "url": "https://njump.compile-error.net/npub1m923fzrg2kczznsnt22xm7kexmeta6slqgnd2yhtn0maxj3kr56sgvlgew",
+          "desc": "「ウザク式何切る？」の麻雀何切る問題を毎日出題します。"
+        },
+        {
+          "icon": "🗞️",
+          "name": "Publickey 配信 (非公式)",
+          "path": "njump.compile-error.net/npub144q6…",
+          "url": "https://njump.compile-error.net/npub144q65dqf0wwdzk3jtzhk6qpuygasm4nke4g4vw60yq5s2clzea4qzfdppm",
+          "desc": "Publickey (publickey1.jp) の IT ニュース記事を配信しています。(非公式)"
+        },
+        {
+          "icon": "📻",
+          "name": "vim-jp ラジオ",
+          "path": "njump.compile-error.net/npub1q7ng…",
+          "url": "https://njump.compile-error.net/npub1q7ngar9h8ave99hhaaven32rc7djwkjsgvtwr673qcrh7fp4qmqslcny0n",
+          "desc": "エンジニアが集まるコミュニティ vim-jp から生まれた音声プログラムの配信情報をお届けします。"
+        },
+        {
+          "icon": "🐐",
+          "name": "やぎちゃん",
+          "path": "njump.compile-error.net/npub1ayk3…",
+          "url": "https://njump.compile-error.net/npub1ayk3a3yhw6fjj9mfpr97cmxdupfgmzfu39t7v5rzggwxvtydqfhqf79qqt",
+          "desc": "リプライで会話する AI エージェント。"
+        },
+        {
+          "icon": "⚡",
+          "name": "Yahoo!ニュース 速報 (非公式)",
+          "path": "njump.compile-error.net/npub1rtlh…",
+          "url": "https://njump.compile-error.net/npub1rtlhfx7welx2lc0v734tyhcx79q0r5vdcgaj28w7tr4nez5rmwpshndwys",
+          "desc": "Yahoo!ニュース 速報 (主要トピックス) の記事を配信しています。(非公式)"
+        }
+      ]
+    },
+    {
+      "title": "Tools",
+      "style": "cards",
+      "items": [
+        {
+          "icon": "⌨️",
+          "name": "algia",
+          "path": "github.com/mattn/algia",
+          "url": "https://github.com/mattn/algia",
+          "desc": "コマンドラインから Nostr を読み書きする CLI クライアント。"
+        },
+        {
+          "icon": "📰",
+          "name": "feed2nostr",
+          "path": "github.com/mattn/feed2nostr",
+          "url": "https://github.com/mattn/feed2nostr",
+          "desc": "RSS/Atom フィードの更新を Nostr に投稿します。"
+        },
+        {
+          "icon": "📈",
+          "name": "nip66-reporter",
+          "path": "github.com/mattn/nip66-reporter",
+          "url": "https://github.com/mattn/nip66-reporter",
+          "desc": "リレーを巡回して稼働状況を調べ、NIP-66 のリレー情報 (kind 30166) として公開する監視ツール。"
+        },
+        {
+          "icon": "🔔",
+          "name": "nostr-alert",
+          "path": "github.com/mattn/nostr-alert",
+          "url": "https://github.com/mattn/nostr-alert",
+          "desc": "Prometheus Alertmanager の通知を受け取り、暗号化 DM として転送します。"
+        },
+        {
+          "icon": "💾",
+          "name": "nostr-backup",
+          "path": "github.com/mattn/nostr-backup",
+          "url": "https://github.com/mattn/nostr-backup",
+          "desc": "ユーザ (pubkey) ごとに指定した kind のイベントを毎晩 PostgreSQL にバックアップします。"
+        },
+        {
+          "icon": "🪙",
+          "name": "nostr-coinchart",
+          "path": "github.com/mattn/nostr-coinchart",
+          "url": "https://github.com/mattn/nostr-coinchart",
+          "desc": "リプライに応じて Binance のデータから暗号通貨のチャート画像を生成して返します。"
+        },
+        {
+          "icon": "🕵️",
+          "name": "nostr-fushinsha-summary",
+          "path": "github.com/mattn/nostr-fushinsha-summary",
+          "url": "https://github.com/mattn/nostr-fushinsha-summary",
+          "desc": "不審者情報のまとめを Nostr に投稿します。"
+        },
+        {
+          "icon": "🥇",
+          "name": "nostr-relay-ranking",
+          "path": "github.com/mattn/nostr-relay-ranking",
+          "url": "https://github.com/mattn/nostr-relay-ranking",
+          "desc": "kind 10002 を集計して、リレーの利用ランキングを生成します。"
+        },
+        {
+          "icon": "🎵",
+          "name": "nostr-status-lastfm",
+          "path": "github.com/mattn/nostr-status-lastfm",
+          "url": "https://github.com/mattn/nostr-status-lastfm",
+          "desc": "Last.fm の再生履歴から、いま聴いている曲を kind 30315 のステータスとして更新します。"
+        }
+      ]
+    },
+    {
+      "title": "Articles",
+      "style": "cards",
+      "items": [
+        {
+          "icon": "🐦‍⬛",
+          "name": "誰でも作れる Nostr リレーサーバの作り方",
+          "path": "Zenn — 2025年12月8日",
+          "url": "https://zenn.dev/mattn/articles/a1a67af88394b4",
+          "desc": ""
+        },
+        {
+          "icon": "🦴",
+          "name": "Linux の Google Chrome で nostr: を Nostter で開く",
+          "path": "Zenn — 2024年1月18日",
+          "url": "https://zenn.dev/mattn/articles/6dc9cb9b396722",
+          "desc": ""
+        },
+        {
+          "icon": "👾",
+          "name": "Nostr の面白さをエンジニア目線で解説してみる",
+          "path": "Zenn — 2023年12月16日",
+          "url": "https://zenn.dev/mattn/articles/cf43423178d65c",
+          "desc": ""
+        },
+        {
+          "icon": "📖",
+          "name": "Nostr botの作り方",
+          "path": "Software Design 2023年12月号 — 連載「新時代の分散型SNS Nostr」最終回",
+          "url": "https://gihyo.jp/magazine/SD/archive/2023/202312",
+          "desc": ""
+        },
+        {
+          "icon": "📰",
+          "name": "RSS/Atom フィードを Twitter/Nostr にポストする小さいプログラムを書いた。",
+          "path": "Zenn — 2023年6月3日",
+          "url": "https://zenn.dev/mattn/articles/7ac25f3328bde3",
+          "desc": ""
+        },
+        {
+          "icon": "🐙",
+          "name": "nostr と Bluesky に7つ bot を作り k8s で稼働させた",
+          "path": "Zenn — 2023年5月4日",
+          "url": "https://zenn.dev/mattn/articles/cbc42abe8be82b",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "title": "More on GitHub",
+      "style": "chips",
+      "items": [
+        {
+          "name": "cloudflare-nostr-chinchin",
+          "url": "https://github.com/mattn/cloudflare-nostr-chinchin"
+        },
+        {
+          "name": "cloudflare-nostr-nowplaying",
+          "url": "https://github.com/mattn/cloudflare-nostr-nowplaying"
+        },
+        {
+          "name": "cloudflare-nostr-nullpoga",
+          "url": "https://github.com/mattn/cloudflare-nostr-nullpoga"
+        },
+        {
+          "name": "go-nostr-yabume",
+          "url": "https://github.com/mattn/go-nostr-yabume"
+        },
+        {
+          "name": "go-nostrbuild",
+          "url": "https://github.com/mattn/go-nostrbuild"
+        },
+        {
+          "name": "lua-nostr-schnorr",
+          "url": "https://github.com/mattn/lua-nostr-schnorr"
+        },
+        {
+          "name": "nostr-anonymousface",
+          "url": "https://github.com/mattn/nostr-anonymousface"
+        },
+        {
+          "name": "nostr-btcchart",
+          "url": "https://github.com/mattn/nostr-btcchart"
+        },
+        {
+          "name": "nostr-cxx-bot",
+          "url": "https://github.com/mattn/nostr-cxx-bot"
+        },
+        {
+          "name": "nostr-delete-events",
+          "url": "https://github.com/mattn/nostr-delete-events"
+        },
+        {
+          "name": "nostr-forwarder",
+          "url": "https://github.com/mattn/nostr-forwarder"
+        },
+        {
+          "name": "nostr-geohash-decoder",
+          "url": "https://github.com/mattn/nostr-geohash-decoder"
+        },
+        {
+          "name": "nostr-id",
+          "url": "https://github.com/mattn/nostr-id"
+        },
+        {
+          "name": "nostr-ircd",
+          "url": "https://github.com/mattn/nostr-ircd"
+        },
+        {
+          "name": "nostr-json-schemas",
+          "url": "https://github.com/mattn/nostr-json-schemas",
+          "title": "JSON schema for Nostr Event JSON"
+        },
+        {
+          "name": "nostr-mute",
+          "url": "https://github.com/mattn/nostr-mute"
+        },
+        {
+          "name": "nostr-notify",
+          "url": "https://github.com/mattn/nostr-notify"
+        },
+        {
+          "name": "nostr-nowplaying",
+          "url": "https://github.com/mattn/nostr-nowplaying",
+          "title": "Update #nowplaying NIP-38 status (kind 30315) for Rhythmbox"
+        },
+        {
+          "name": "nostr-nsite-server",
+          "url": "https://github.com/mattn/nostr-nsite-server",
+          "title": "Serve and publish NIP-5A static sites (nsite) over HTTP"
+        },
+        {
+          "name": "nostr-nullpoga.deno.dev",
+          "url": "https://github.com/mattn/nostr-nullpoga.deno.dev"
+        },
+        {
+          "name": "nostr-ojichat",
+          "url": "https://github.com/mattn/nostr-ojichat"
+        },
+        {
+          "name": "nostr-relay-benchmark",
+          "url": "https://github.com/mattn/nostr-relay-benchmark"
+        },
+        {
+          "name": "nostr-relay-http-chunk",
+          "url": "https://github.com/mattn/nostr-relay-http-chunk"
+        },
+        {
+          "name": "nostr-search",
+          "url": "https://github.com/mattn/nostr-search"
+        },
+        {
+          "name": "nostr-swiss-army-knife",
+          "url": "https://github.com/mattn/nostr-swiss-army-knife"
+        },
+        {
+          "name": "nostr-ui",
+          "url": "https://github.com/mattn/nostr-ui",
+          "title": "WIP: nostr gui client"
+        },
+        {
+          "name": "nostr-undelete",
+          "url": "https://github.com/mattn/nostr-undelete"
+        },
+        {
+          "name": "nostr-whois",
+          "url": "https://github.com/mattn/nostr-whois"
+        },
+        {
+          "name": "sqlite3-nostr",
+          "url": "https://github.com/mattn/sqlite3-nostr"
+        }
+      ]
+    }
+  ]
+}
