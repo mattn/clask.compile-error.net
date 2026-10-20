@@ -19,7 +19,7 @@
           "desc": "NIP-66 のリレー監視レポート (kind 30166) を取得して、リレーの稼働状況を一覧します。"
         },
         {
-          "icon": "💞",
+          "icon": "💕",
           "name": "Nostr 相性診断",
           "path": "clask.compile-error.net/nostr-aishou",
           "url": "nostr-aishou/",
