@@ -134,14 +134,14 @@
           "name": "Cagliostr",
           "path": "wss://cagliostr.compile-error.net",
           "url": "https://cagliostr.compile-error.net/",
-          "desc": "C++ で書かれた Nostr リレー。"
+          "desc": "C++ で書かれた Nostr リレー実装。"
         },
         {
           "icon": "🏠",
           "name": "Casanostr",
           "path": "wss://casanostr.compile-error.net",
           "url": "https://casanostr.compile-error.net/",
-          "desc": "C で書かれた Nostr リレー。"
+          "desc": "C で書かれた Nostr リレー実装。"
         },
         {
           "icon": "👥",
@@ -155,70 +155,70 @@
           "name": "Crystal Nostr Relay",
           "path": "wss://crystal-nostr-relay.compile-error.net",
           "url": "https://crystal-nostr-relay.compile-error.net/",
-          "desc": "Crystal で書かれた軽量な Nostr リレー実装。"
+          "desc": "Crystal で書かれた Nostr リレー実装。"
         },
         {
           "icon": "🐍",
           "name": "Lisp Nostr Relay",
           "path": "wss://lisp-nostr-relay.compile-error.net",
           "url": "https://lisp-nostr-relay.compile-error.net/",
-          "desc": "Lisp で書かれた軽量な Nostr リレー実装。"
+          "desc": "Lisp で書かれた Nostr リレー実装。"
         },
         {
           "icon": "🌙",
           "name": "Lua Nostr Relay",
           "path": "wss://lua-nostr-relay.compile-error.net",
           "url": "https://lua-nostr-relay.compile-error.net/",
-          "desc": "Lua で書かれた軽量な Nostr リレー実装。"
+          "desc": "Lua で書かれた Nostr リレー実装。"
         },
         {
           "icon": "🐰",
           "name": "MoonBit Nostr Relay",
           "path": "wss://moonbit-nostr-relay.compile-error.net",
           "url": "https://moonbit-nostr-relay.compile-error.net/",
-          "desc": "MoonBit で書かれた軽量な Nostr リレー実装。"
+          "desc": "MoonBit で書かれた Nostr リレー実装。"
         },
         {
           "icon": "💠",
           "name": "mruby Nostr Relay",
           "path": "wss://mruby-nostr-relay.compile-error.net",
           "url": "https://mruby-nostr-relay.compile-error.net/",
-          "desc": "mruby で書かれた Nostr リレー。"
+          "desc": "mruby で書かれた Nostr リレー実装。"
         },
         {
           "icon": "👑",
           "name": "Nim Nostr Relay",
           "path": "wss://nim-nostr-relay.compile-error.net",
           "url": "https://nim-nostr-relay.compile-error.net/",
-          "desc": "Nim で書かれた軽量な Nostr リレー実装。"
+          "desc": "Nim で書かれた Nostr リレー実装。"
         },
         {
           "icon": "🐫",
           "name": "OCaml Nostr Relay",
           "path": "wss://ocaml-nostr-relay.compile-error.net",
           "url": "https://ocaml-nostr-relay.compile-error.net/",
-          "desc": "OCaml で書かれた Nostr リレー。"
+          "desc": "OCaml で書かれた Nostr リレー実装。"
         },
         {
           "icon": "🐪",
           "name": "Perl Nostr Relay",
           "path": "wss://perl-nostr-relay.compile-error.net",
           "url": "https://perl-nostr-relay.compile-error.net/",
-          "desc": "Perl で書かれたシンプルな Nostr リレー実装。"
+          "desc": "Perl で書かれた Nostr リレー実装。"
         },
         {
           "icon": "♦️",
           "name": "Ruby Nostr Relay",
           "path": "wss://ruby-nostr-relay.compile-error.net",
           "url": "https://ruby-nostr-relay.compile-error.net/",
-          "desc": "Ruby で書かれた軽量な Nostr リレー実装。"
+          "desc": "Ruby で書かれた Nostr リレー実装。"
         },
         {
           "icon": "⚡",
           "name": "Zig Nostr Relay",
           "path": "wss://zig-nostr-relay.compile-error.net",
           "url": "https://zig-nostr-relay.compile-error.net/",
-          "desc": "Zig で書かれた軽量な Nostr リレー実装。"
+          "desc": "Zig で書かれた Nostr リレー実装。"
         }
       ]
     },
