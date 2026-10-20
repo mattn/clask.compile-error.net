@@ -40,6 +40,13 @@
           "desc": "Nostr 上で公開されているポッドキャストのチャンネルとエピソードを選んで、そのままブラウザで再生できます。"
         },
         {
+          "icon": "⏱️",
+          "name": "Nostr Relay Speed",
+          "path": "clask.compile-error.net/nostr-relay-speed",
+          "url": "nostr-relay-speed/",
+          "desc": "リレーへの接続時間とクエリ応答時間を、あなたのブラウザから同一条件で測って比較します。"
+        },
+        {
           "icon": "📚",
           "name": "Nostr Wiki",
           "path": "clask.compile-error.net/nostr-wiki",
