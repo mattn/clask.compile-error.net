@@ -172,6 +172,13 @@
           "desc": "Crystal で書かれた Nostr リレー実装。"
         },
         {
+          "icon": "⭐",
+          "name": "Gleam Nostr Relay",
+          "path": "wss://gleam-nostr-relay.compile-error.net",
+          "url": "https://gleam-nostr-relay.compile-error.net/",
+          "desc": "Gleam で書かれた Nostr リレー実装。"
+        },
+        {
           "icon": "🐍",
           "name": "Lisp Nostr Relay",
           "path": "wss://lisp-nostr-relay.compile-error.net",
@@ -212,6 +219,13 @@
           "path": "wss://ocaml-nostr-relay.compile-error.net",
           "url": "https://ocaml-nostr-relay.compile-error.net/",
           "desc": "OCaml で書かれた Nostr リレー実装。"
+        },
+        {
+          "icon": "🔵",
+          "name": "Odin Nostr Relay",
+          "path": "wss://odin-nostr-relay.compile-error.net",
+          "url": "https://odin-nostr-relay.compile-error.net/",
+          "desc": "Odin で書かれた Nostr リレー実装。"
         },
         {
           "icon": "🐪",
